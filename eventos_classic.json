@@ -4,13 +4,13 @@
 	"apellido": "Gaston",
 	"dni": "29494777",
 	"tipo": "CLASSIC",
-	"direccion" : {
+	"direccion" : [{
 		"calle" : "Rivadavia",
 		"numero" : "7900",
 		"ciudad": "Capital Federal",
 		"provincia" : "Buenos Aires",
 		"pais": "Argentina"
-	},
+	}],
 	"transacciones": [{
 			"estado": "ACEPTADA",
 			"tipo": "RETIRO_EFECTIVO_CAJERO_AUTOMATICO",
