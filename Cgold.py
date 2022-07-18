@@ -1,6 +1,5 @@
-from Tipos_clientes.cliente import Cliente
 
-class ClienteBlack (Cliente):
+class ClienteGold ():
     def puede_crear_chequera(self)->bool: 
         return True
     def puede_crear_tarjeta_credito(self)->bool:

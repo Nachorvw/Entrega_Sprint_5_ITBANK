@@ -1,6 +1,6 @@
-from Tipos_clientes.cliente import Cliente
 
-class ClienteClassic (Cliente):
+
+class ClienteClassic ():
     def puede_crear_chequera(self)->bool: 
         return False
     def puede_crear_tarjeta_credito(self)->bool:
