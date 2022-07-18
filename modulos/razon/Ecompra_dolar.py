@@ -1,5 +1,5 @@
-from Ablack import *
-from obj_cuenta import *
+from modulos.cliente.Ablack import *
+from modulos.obj_cuenta import *
 
 class Dolar (object):
     def __init__(self,limite,monto,saldo,totalTarjetasDeCredito,totalChequeras,tipo,dolar):
@@ -15,4 +15,5 @@ class Dolar (object):
         if self.tipo=="COMPRA_DOLAR":
             if self.dolar :
                 if self.limite <= self.monto:
-                    return "Superaste el limite"
+                    return "Superaste el cupo diario restante"
+            return "no esta habilitado para comprar dolares"

@@ -1,14 +1,14 @@
 
-from Ablack import ClienteBlack
-from Ecompra_dolar import Dolar
-from Fretiro_efectivo import Efectivo
-from Gtarjeta_credito import TarjetaCredito
-from Htran_enviada import Enviado
-from obj_cuenta import *
-from lecturaJSON import *
-from Dchequera import *
+from modulos.cliente.Ablack import ClienteBlack
+from modulos.razon.Ecompra_dolar import Dolar
+from modulos.razon.Fretiro_efectivo import Efectivo
+from modulos.razon.Gtarjeta_credito import TarjetaCredito
+from modulos.razon.Htran_enviada import Enviado
+from modulos.obj_cuenta import *
+from modulos.lecturaJSON import *
+from modulos.razon.Dchequera import *
 
-pepe=[]
+listaRazones=[]
 
 for d in diccionario_transacciones_black:
 
@@ -19,17 +19,19 @@ for d in diccionario_transacciones_black:
     efectivo= Efectivo(d['cupoDiarioRestante'],d['monto'],d['saldoEnCuenta'],d['totalTarjetasDeCreditoActualmente'],d['totalChequerasActualmente'],d['tipo'],p.puede_comprar_dolar())
     tarCredito= TarjetaCredito(d['cupoDiarioRestante'],d['monto'],d['saldoEnCuenta'],d['totalTarjetasDeCreditoActualmente'],d['totalChequerasActualmente'],d['tipo'],p.puede_crear_tarjeta_credito())
     enviado= Enviado(d['cupoDiarioRestante'],d['monto'],d['saldoEnCuenta'],d['totalTarjetasDeCreditoActualmente'],d['totalChequerasActualmente'],d['tipo'],True)
-    pepe.append(cheque.razonCheque())
-    pepe.append(dolar.razonDolar())
-    pepe.append(efectivo.razonRetiro())
-    pepe.append(tarCredito.razonCredito())
-    pepe.append(enviado.razonEnviado())
-    #print(cheque.razonCheque())
-    #print(dolar.razonDolar())
-    #print(efectivo.razonRetiro())
-    #print(tarCredito.razonCredito())
-    #print(enviado.razonEnviado())
-print(pepe)
+    if cheque.razonCheque():
+        listaRazones.append(cheque.razonCheque())
+    elif dolar.razonDolar():
+        listaRazones.append(dolar.razonDolar())
+    elif efectivo.razonRetiro():
+        listaRazones.append(efectivo.razonRetiro())
+    elif tarCredito.razonCredito():
+        listaRazones.append(tarCredito.razonCredito())
+    elif enviado.razonEnviado():
+        listaRazones.append(enviado.razonEnviado())
+    else: listaRazones.append("ACEPTADA")
+
+print(listaRazones)
 
 
   

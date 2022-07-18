@@ -1,5 +1,5 @@
-from obj_cliente import Cliente
-from lecturaJSON import *
+from modulos.cliente.obj_cliente import Cliente
+from modulos.lecturaJSON import *
 
 class ClienteBlack (Cliente):
     def puede_crear_chequera(self)->bool: 

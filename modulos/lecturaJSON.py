@@ -1,5 +1,5 @@
 import json
-from obj_cuenta import *
+from modulos.obj_cuenta import *
 
 #------------------------------
 diccionario_transacciones_black = []

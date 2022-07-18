@@ -1,6 +1,6 @@
 
-from Ablack import *
-from obj_cuenta import *
+from modulos.cliente.Ablack import *
+from modulos.obj_cuenta import *
 
 """ class Cheques (ClienteBlack):
     def resol (p):
@@ -41,5 +41,6 @@ class Cheques (object):
         if self.tipo=="ALTA_CHEQUERA":
             if self.cheque :
                 if self.totalChequeras >= 2:
-                    return "tiene muchas chequetas, No puedes crear una mas"
+                    return "Ya diste de alta el maximo permitido de chequeras"
+            return "no esta habilitado para dar de alta una chequera"
 

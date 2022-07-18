@@ -1,5 +1,5 @@
-from Ablack import *
-from obj_cuenta import *
+from modulos.cliente.Ablack import *
+from modulos.obj_cuenta import *
 
 class Efectivo (object):
     def __init__(self,limite,monto,saldo,totalTarjetasDeCredito,totalChequeras,tipo,efectivo):
