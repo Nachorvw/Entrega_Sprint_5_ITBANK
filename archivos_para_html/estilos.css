@@ -1,0 +1,21 @@
+html {
+  margin-left: 20px;
+}
+h1 {
+  margin-right: 20px;
+  border-bottom: 1px black solid;
+}
+div {
+  padding-bottom: 2px;
+}
+table {
+  border: 3px solid black;
+}
+tr {
+  margin-bottom: 5px;
+}
+td {
+  margin-right: auto;
+  margin-left: 10px;
+  border: 1px black groove;
+}
