@@ -1,19 +1,26 @@
 import webbrowser
+from app import p
+from modulos import lecturaJSON
+
+
+#Recorro la informacion del cliente para obtener su direccion
+direct=lecturaJSON.data_black['direccion']
+direcciones= f"{direct['calle']} {direct['numero']}, {direct['ciudad']}, {direct['provincia']}, {direct['pais']} "
+
 
 def creaHTML():
     
-    
-    nombre="Gabriel, Moreno"
-    numeroCliente="450066"
-    DNI="2947744"
-    direccion="tu casita 12345"
+    nombre=f"{p.nombre}, {p.apellido}"
+    numeroCliente=lecturaJSON.numero_cliente
+    DNI=p.dni
+    direccion=direcciones
     #Abro el archivo HTML
     fun = open('index.html', 'w')
     #Le doy la forma al archivo html
     html_template = f"""
     <html>
         <head>
-            <title>Title</title>
+            <title>Historial de Transacciones</title>
             <link rel="stylesheet" href="archivos_para_html/estilos.css">
         </head>
         <body>
