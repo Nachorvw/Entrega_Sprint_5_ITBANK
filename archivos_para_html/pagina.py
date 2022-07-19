@@ -1,12 +1,13 @@
 import webbrowser
+from app import p
 
 def creaHTML():
     
     
-    nombre="Gabriel, Moreno"
-    numeroCliente="450066"
-    DNI="2947744"
-    direccion="tu casita 12345"
+    nombre=p.nombre 
+    numeroCliente=p.cliente
+    DNI=p.dni
+    direccion=p.nombre
     #Abro el archivo HTML
     fun = open('index.html', 'w')
     #Le doy la forma al archivo html
