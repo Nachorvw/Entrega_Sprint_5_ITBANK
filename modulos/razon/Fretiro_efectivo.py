@@ -11,9 +11,12 @@ class Efectivo (object):
         self.tipo=tipo
         self.efectivo=efectivo
         
+        
     def razonRetiro(self):
         if self.tipo=="RETIRO_EFECTIVO_CAJERO_AUTOMATICO":
                 if self.monto>self.limite:
                     return "Superaste el limite"
+                elif self.monto>self.saldo:
+                    return "No tiene saldo suficiente"
             
 

@@ -42,5 +42,7 @@ class Cheques (object):
             if self.cheque :
                 if self.totalChequeras >= 2:
                     return "Ya diste de alta el maximo permitido de chequeras"
+                if self.monto>self.limite:
+                    return "Superaste el cupo diario"
             return "no esta habilitado para dar de alta una chequera"
 

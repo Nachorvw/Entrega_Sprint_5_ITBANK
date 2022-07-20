@@ -13,7 +13,7 @@ direccion_cliente_black = []
 
 #------------------------------------------
 #usuarios BLACK
-with open("eventos_black.json") as black:
+with open("eventos_classic.json") as black:
     data_json_black = black.read()
     data_black = json.loads(data_json_black)
 # print(data_black)

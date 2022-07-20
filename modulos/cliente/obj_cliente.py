@@ -8,31 +8,12 @@ class Cliente (object):
         self.cliente=cliente
 
     def caja_de_ahorro_pesos(self)->bool: 
-        if (self.cliente == ("CLASSIC")):
-            return True
-            
-        elif (self.cliente == ("BLACK")):
-            return True
-
-        else: return True
+        return True
           
     def caja_de_ahorro_dolares(self)->bool:
-        if (self.cliente == ("CLASSIC")):
-            return False
-            
-        elif (self.cliente == ("BLACK")):
-            return True
-
-        else: return True
-
+        return True
 
     def cuenta_corriente(self)->bool:
-        if (self.cliente == ("RECHAZADA")):
-            return False
-
-        elif (self.cliente == ("ACEPTADA")):
-            return True
-
-        else: return True
+        return True
 
 

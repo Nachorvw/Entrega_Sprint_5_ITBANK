@@ -14,7 +14,11 @@ class TarjetaCredito (object):
     def razonCredito(self):
         if self.tipo=="ALTA_TARJETA_CREDITO":
             if self.credito:
-                if self.totalTarjetas>5:
+                if self.totalTarjetas>=5:
                     return "Superaste el limite, de tarjetas de credito"
+                elif self.monto>self.limite:
+                    return "Superaste el limite, de cupo diario" 
+            
+                return "no esta habilitado para dar de alta una tarjeta de credito"
             
 
